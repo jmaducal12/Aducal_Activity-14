@@ -1,0 +1,16 @@
+- name: Install Keystone in Controller Node
+  apt:
+    name:
+      - keystone
+    state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install Nova services in Controller Node
+  apt:
+    name:
+      - nova-api
+      - nova-conductor
+      - nova-novncproxy
+      - nova-scheduler
+    state: latest
+  when: ansible_distribution == "Ubuntu"

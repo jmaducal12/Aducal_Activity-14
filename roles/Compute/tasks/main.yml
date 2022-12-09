@@ -1,0 +1,3 @@
+- name: Install Nova services in Compute Node
+  command: yum install openstack-nova-compute -y --skip-broken
+  when: ansible_distribution == "CentOS"

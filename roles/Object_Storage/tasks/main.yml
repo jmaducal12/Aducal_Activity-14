@@ -1,0 +1,6 @@
+- name: Install Glance in Object Storage Node
+  apt:
+    name:
+      - glance
+    state: latest
+  when: ansible_distribution == "Ubuntu"
